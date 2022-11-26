@@ -1,0 +1,186 @@
+/* Write your CSS here */
+.bg-container {
+  background-image: linear-gradient(to bottom, #fbc7d4, #9796f0);
+  background-size: cover;
+  min-height: 100vh;
+
+  padding: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.white-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-1 {
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 10px;
+}
+
+.container-2 {
+  width: 500px;
+
+  border-top: 1px solid black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-2-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.para-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 160px;
+  font-size: 12px;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 160px;
+}
+@media all and (max-width: 576px) {
+  .para-container {
+    margin-right: 60px;
+  }
+  .button-container {
+    margin-left: 60px;
+  }
+
+  .container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10px;
+  }
+  .container-2 {
+    width: 300px;
+  }
+
+  .button-text2 {
+    margin-left: 10px;
+  }
+  .heading-appointments {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+}
+
+.button-text2 {
+  color: #b5b7c4;
+  border: 2px solid #8b5cf6;
+  background-color: transparent;
+  border-radius: 10px;
+}
+.heading-appointments {
+  font-weight: bold;
+}
+
+.image-big {
+  height: 200px;
+  width: 250px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-right: 90px;
+}
+.button-text1 {
+  text-align: start;
+  margin-right: 130px;
+
+  border: 0px none transparent;
+  border-radius: 5px;
+  color: white;
+  font-family: 'roboto';
+  background-color: #8b5cf6;
+  padding-left: 45px;
+  padding-right: 10x;
+  padding: 5px;
+}
+
+.input-1-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  margin-bottom: 10px;
+  color: #b5b7c4;
+  font-size: 12px;
+}
+.input-2-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  margin-bottom: 10px;
+
+  color: #b5b7c4;
+  font-size: 12px;
+}
+.input-1-style {
+  outline: none;
+  border-radius: 3px;
+  border: 2px solid #b5b7c4;
+}
+.input-2-style {
+  outline: none;
+  border-radius: 3px;
+  border: 2px solid #b5b7c4;
+
+  width: 170px;
+}
+
+.heading-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'roboto';
+}
+.unordered-list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+  margin: 10px;
+}
+@media all and (max-width: 576px) {
+  .unordered-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+  }
+}
