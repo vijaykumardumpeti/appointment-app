@@ -1,39 +1,27 @@
-import {Component} from 'react'
-
-import {format} from 'date-fns'
-
 import './index.css'
 
-export default class AppointmentItem extends Component {
-  render() {
-    const {eachObject, key, onChangeState} = this.props
-    const {title, id, isStarred, date} = eachObject
+const AppointmentIem = props => {
+  const {appointmentDetails, toggleIsStarred} = props
+  const {id, title, date, isStarred} = appointmentDetails
+  const starImgUrl = isStarred
+    ? 'https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png'
+    : 'https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png'
 
-    this.onChangeStarred = () => {
-      onChangeState(id)
-    }
-
-    const formatDate = format(new Date(date), 'dd MMMM yyyy, EEEE')
-
-    const imageUrl = isStarred
-      ? 'https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png'
-      : 'https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png'
-    return (
-      <li key={key} className="list-item-container">
-        <div className="title-star-container">
-          <p className="title-heading">{title}</p>
-          <button
-            onClick={this.onChangeStarred}
-            className="star-button"
-            type="button"
-          >
-            <img alt="star" src={imageUrl} />
-          </button>
-        </div>
-        <div className="date-container">
-          <p>{formatDate}</p>
-        </div>
-      </li>
-    )
+  const onClickStar = () => {
+    toggleIsStarred(id)
   }
+
+  return (
+    <li className="appointment-item">
+      <div className="header-container">
+        <p className="title">{title}</p>
+        <button type="button" className="star-button" onClick={onClickStar}>
+          <img src={starImgUrl} className="star" alt="star" />
+        </button>
+      </div>
+      <p className="date">Date: {date}</p>
+    </li>
+  )
 }
+
+export default AppointmentIem
